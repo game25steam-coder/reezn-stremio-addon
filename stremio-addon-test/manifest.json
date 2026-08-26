@@ -1,0 +1,13 @@
+{
+  "id": "org.reezn.test",
+  "version": "0.0.2",
+  "name": "Reezn Source Test (VixSrc POC)",
+  "description": "Proof of concept: reuses the Reezn app's VixSrc resolver flow as a Stremio stream provider. Test only.",
+  "resources": ["stream"],
+  "types": ["movie", "series"],
+  "catalogs": [],
+  "idPrefixes": ["tt"],
+  "background": "https://i.imgur.com/definitely-not-required.jpg",
+  "logo": "https://logo.clearbit.com/stremio.com",
+  "contactEmail": "test@example.com"
+}

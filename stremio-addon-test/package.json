@@ -1,0 +1,12 @@
+{
+  "name": "reezn-stremio-addon",
+  "version": "0.0.2",
+  "description": "Reezn Stremio add-on — VixSrc + HDBox resolvers",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
