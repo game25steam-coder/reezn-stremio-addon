@@ -24,7 +24,6 @@ function withTimeout(promise, ms, label) {
     new Promise((_, rej) => setTimeout(() => rej(new Error(`${label} timeout ${ms}ms`)), ms)),
   ]);
 }
-
 async function imdbToTmdb(type, imdbId) {
   const ck = `${type}:${imdbId}`;
   const hit = cacheGet(metaCache, ck);
@@ -99,7 +98,7 @@ async function handleStream(req, res, type, idParts) {
               streamHeaders = undefined;
               console.log(`[STREMIO] HDBox proxied -> ${streamUrl.slice(0,80)}...`);
             }
-            streams.push({ name: `Reezn ${v.source}`, title: `${v.quality} | ${name} • ${v.source} • ${v.url.includes('.m3u8')?'HLS':'MP4'}`, url: streamUrl, ...(streamHeaders ? { headers: streamHeaders } : {}) });
+            streams.push({ name: `Reezn ${v.source}`, title: `${v.quality} | ${name} • ${v.url.includes('.m3u8')?'HLS':'MP4'}`, url: streamUrl, ...(streamHeaders ? { headers: streamHeaders } : {}) });
           }
         } else {
           console.log(`[STREMIO] ${r.reason?.message?.includes('HDBox') ? 'HDBox' : 'VixSrc'}: FAILED ${r.reason.message}`);
